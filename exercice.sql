@@ -7,6 +7,7 @@ LEFT JOIN rental ON inventory.inventory_id = rental.inventory_id
 WHERE film.rating IN ('G', 'PG') AND rental.inventory_id IS NULL;
 
 
+
 --Create a new table which will represent a waiting list for children’s movies. This will allow a child to add their name to the list until the DVD is available (has been returned). Once the child takes the DVD, their name should be removed from the waiting list (ideally using triggers, but we have not learned about them yet. Let’s assume that our Python program will manage this). Which table references should be included?
 
 CREATE TABLE children_waiting_list (
